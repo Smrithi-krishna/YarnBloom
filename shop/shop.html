@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YarnBloom | Crochet Shop</title>
+
+    <link rel="stylesheet" href="shop.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        <img src="../logo.png" alt="YarnBloom Logo">
+        <span>YarnBloom</span>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#collections">Collections</a></li>
+        <li><a href="../index.html#patterns">Patterns</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+
+    <div class="cart-icon" onclick="toggleCart()">
+    🛒 <span id="cartCount">0</span>
+</div>
+
+<div class="wishlist-icon" onclick="toggleWishlist()">
+    ❤️ <span id="wishlistCount">0</span>
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="shop-hero">
+
+    <h1>Crochet Shop</h1>
+
+    <p>Everything you need to start your next crochet project.</p>
+
+</section>
+
+<!-- SEARCH -->
+
+<section class="search-section">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search crochet materials..."
+        onkeyup="searchProducts()"
+    >
+
+</section>
+
+<!-- FILTER -->
+
+<section class="filter-section">
+
+    <button onclick="filterProducts('all')">All</button>
+
+    <button onclick="filterProducts('hooks')">Hooks</button>
+
+    <button onclick="filterProducts('yarn')">Yarn</button>
+
+    <button onclick="filterProducts('accessories')">Accessories</button>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="products">
+
+<div class="product-grid">
+
+<div class="product-card hooks">
+<img src="../levels/images/hooks.png">
+<h3>Crochet Hook Set</h3>
+<p>Premium aluminium hooks (2.5mm–8mm)</p>
+<h4>₹399</h4>
+
+<button onclick="addToCart('Crochet Hook Set',399)">
+Add to Cart
+</button>
+<button onclick="addWishlist(this,'Crochet Hook Set')">
+♡ Wishlist
+</button>
+
+</div>
+
+<div class="product-card yarn">
+<img src="../levels/images/yarn.png">
+<h3>Cotton Yarn</h3>
+<p>20 vibrant colours</p>
+<h4>₹249</h4>
+<button onclick="addToCart('Cotton Yarn',249)">
+Add to Cart
+</button>
+<button onclick="addWishlist(this,'Cotton Yarn')">
+♡ Wishlist
+</button>
+
+</div>
+
+<div class="product-card yarn">
+<img src="../levels/images/fiberfill.png">
+<h3>Chenille Yarn</h3>
+<p>Perfect for plushies</p>
+<h4>₹329</h4>
+
+<button onclick="addToCart('Chenille Yarn',329)">
+Add to Cart
+</button>
+<button onclick="addWishlist(this,'Chanille Yarn')">
+♡ Wishlist
+</button>
+
+</div>
+
+<div class="product-card accessories">
+<img src="../levels/images/needle.png">
+<h3>Yarn Needle Set</h3>
+<p>Set of 3 finishing needles</p>
+<h4>₹99</h4>
+
+<button onclick="addToCart('Yarn Needle',99)">
+Add to Cart
+</button>
+<button onclick="addWishlist(this,'Yarn Needle')">
+♡ Wishlist
+</button>
+</div>
+
+<div class="product-card accessories">
+<img src="../levels/images/markers.png">
+<h3>Stitch Markers</h3>
+<p>50 colorful stitch markers</p>
+<h4>₹149</h4>
+
+<button onclick="addToCart('Stitch Markers',149)">
+Add to Cart
+</button>
+<button onclick="addWishlist(this,'Stitch Markers')">
+♡ Wishlist
+</button>
+
+</div>
+
+<div class="product-card accessories">
+<img src="../levels/images/scissors.png">
+<h3>Embroidery Scissors</h3>
+<p>Sharp stainless steel scissors</p>
+<h4>₹169</h4>
+
+<button onclick="addToCart('Embroidery',169)">
+Add to Cart
+</button>
+<button onclick="addWishlist(this,'Embroidery')">
+♡ Wishlist
+</button>
+
+</div>
+
+<div class="product-card accessories">
+<img src="../levels/images/rowcounter.png">
+<h3>Row Counter</h3>
+<p>Never lose track of rows</p>
+<h4>₹199</h4>
+
+<button onclick="addToCart('Row Counter',199)">
+Add to Cart
+</button>
+<button onclick="addWishlist(this,'Row Counter')">
+♡ Wishlist
+</button>
+
+</div>
+
+<div class="product-card accessories">
+<img src="../levels/images/eyes.png">
+<h3>Safety Eyes</h3>
+<p>100 pieces assorted sizes</p>
+<h4>₹129</h4>
+
+<button onclick="addToCart('Safety Eyes',129)">
+Add to Cart
+</button>
+<button onclick="addWishlist(this,'Safety Eyes')">
+♡ Wishlist
+</button>
+
+</div>
+
+<div class="product-card accessories">
+<img src="../levels/images/crochet.png">
+<h3>Complete Crochet Kit</h3>
+<p>Everything a beginner needs</p>
+<h4>₹999</h4>
+
+<button onclick="addToCart('Crochet Kit',999)">
+Add to Cart
+</button>
+<button onclick="addWishlist(this,'Crochet kit')">
+♡ Wishlist
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-container">
+
+        <!-- COLUMN 1: Brand -->
+        <div class="footer-col">
+             <div class="footer-logo">
+        <img src="../logo.png" alt="YarnBloom Logo">
+        <h3>YarnBloom</h3>
+    </div>
+            <p>Handmade Crochet Creations & Pattern Library</p>
+        </div>
+
+        <!-- COLUMN 2: Quick Links -->
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#shop">Shop</a>
+            <a href="#patterns">Patterns</a>
+        </div>
+
+        <!-- COLUMN 3: Support -->
+        <div class="footer-col">
+            <h4>Support</h4>
+            <a href="#contact">Contact</a>
+            <a href="#faq">FAQ</a>
+            <a href="#privacy">Privacy Policy</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 YarnBloom. All Rights Reserved.</p>
+    </div>
+
+</footer>
+
+<script src="shop.js"></script>
+
+<!-- CART -->
+
+<div id="cartSidebar" class="cart">
+
+    <div class="cart-header">
+        <h2>Shopping Cart</h2>
+
+        <span class="close-cart" onclick="toggleCart()">
+            &times;
+        </span>
+
+    </div>
+
+    <div id="cartItems" class="cart-items">
+        <p>Your cart is empty.</p>
+    </div>
+
+</div>
+
+<div id="wishlistSidebar" class="wishlist">
+
+    <div class="wishlist-header">
+        <h2>Wishlist</h2>
+
+        <span class="close-wishlist"
+              onclick="toggleWishlist()">
+            &times;
+        </span>
+
+    </div>
+
+    <div id="wishlistItems" class="wishlist-items">
+        <p>No favourites yet.</p>
+    </div>
+
+</div>
+
+</body>
+</html>
