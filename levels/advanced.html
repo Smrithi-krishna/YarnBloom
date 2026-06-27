@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Crochet Projects | YarnBloom</title>
+
+    <link rel="stylesheet" href="levels.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="../logo.png" alt="YarnBloom Logo">
+            <span>YarnBloom</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="easy.html">Easy</a></li>
+            <li><a href="intermediate.html">Intermediate</a></li>
+            <li><a href="advanced.html" class="active">Advanced</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero-level">
+
+        <h1>Advanced Crochet Projects</h1>
+
+        <p>
+            Challenge yourself with detailed patterns, intricate stitches,
+            garment construction, and professional crochet techniques.
+        </p>
+
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section class="section">
+
+        <div class="card-grid">
+
+            <div class="card">
+                <img src="images/cardigan.png" alt="Crochet Cardigan">
+
+                <h3>🧥 Crochet Cardigan</h3>
+
+                <p>
+                    Create a stylish wearable garment while learning shaping,
+                    measurements, and assembly.
+                </p>
+
+                <a href="#" class="card-btn" onclick="openPattern('cardigan')">
+                    Try This
+                </a>
+            </div>
+
+            <div class="card">
+                <img src="images/dragon.png" alt="Dragon Amigurumi">
+
+                <h3>🐉 Dragon Amigurumi</h3>
+
+                <p>
+                    Advanced shaping, stuffing techniques, and multiple-piece construction.
+                </p>
+
+                <a href="#" class="card-btn" onclick="openPattern('dragon')">
+                    Try This
+                </a>
+            </div>
+
+            <div class="card">
+                <img src="images/mandala.png" alt="Crochet Mandala">
+
+                <h3>🌸 Crochet Mandala</h3>
+
+                <p>
+                    Beautiful circular artwork featuring intricate stitch combinations.
+                </p>
+
+                <a href="#" class="card-btn" onclick="openPattern('mandala')">
+                    Try This
+                </a>
+            </div>
+
+            <div class="card">
+                <img src="images/blanket.png" alt="Advanced Blanket">
+
+                <h3>🧶 Intricate Blanket</h3>
+
+                <p>
+                    Large-scale crochet project featuring textures, motifs,
+                    and advanced techniques.
+                </p>
+
+                <a href="#" class="card-btn" onclick="openPattern('advancedBlanket')">
+                    Try This
+                </a>
+            </div>
+
+
+            <div class="card">
+                <img src="images/bouquet.png" alt="Flower Bouquet">
+
+                <h3>💐 Flower Bouquet</h3>
+
+                <p>
+                    Craft realistic crochet flowers and combine them into a
+                    beautiful handmade bouquet.
+                </p>
+
+                <a href="#" class="card-btn" onclick="openPattern('bouquet')">
+                    Try This
+                </a>
+            </div>
+
+        </div>
+
+
+        </div>
+
+    </section>
+
+    <!-- ================= PATTERN POPUP ================= -->
+
+    <div id="patternModal" class="modal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closePattern()">&times;</span>
+
+            <h2 id="patternTitle"></h2>
+
+            <p id="patternDifficulty"></p>
+
+            <div class="section-box">
+
+                <h3>🧶 Materials</h3>
+
+                <ul id="patternMaterials"></ul>
+
+            </div>
+
+            <div class="section-box">
+
+                <h3>📖 Abbreviations</h3>
+
+                <p id="patternAbbr"></p>
+
+            </div>
+
+            <div class="section-box">
+
+                <h3>🪡 Step-by-Step Instructions</h3>
+
+                <div id="patternSteps"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= BACK BUTTON ================= -->
+
+    <section class="back-home">
+
+        <a href="../index.html" class="card-btn">
+            ← Back to Home
+        </a>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+
+    <footer>
+
+        <div class="footer-container">
+
+            <!-- COLUMN 1: Brand -->
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <img src="../logo.png" alt="YarnBloom Logo">
+                    <h3>YarnBloom</h3>
+                </div>
+                <p>Handmade Crochet Creations & Pattern Library</p>
+            </div>
+
+            <!-- COLUMN 2: Quick Links -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="../index.html#home">Home</a>
+                <a href="../index.html#about">About</a>
+                <a href="../shop/shop.html">Shop</a>
+                <a href="../index.html#patterns">Patterns</a>
+            </div>
+
+            <!-- COLUMN 3: Support -->
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="../index.html#contact">Contact</a>
+                <a href="../index.html#faq">FAQ</a>
+                <a href="#privacy">Privacy Policy</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 YarnBloom. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>
